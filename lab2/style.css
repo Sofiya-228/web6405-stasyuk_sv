@@ -1,0 +1,38 @@
+body{
+    background-color: #d3e5f8;
+}
+.table{
+    border:1px solid #5f3ac5;
+    width: 500px;
+    margin:auto;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,#98d8dd, #26b4ec);
+}
+a{
+    color:#1f0568;
+    text-decoration: none;
+
+}
+a:hover{
+    color:rgb(170, 93, 21);
+    text-decoration: underline;
+}
+#mem{
+    width: 200px;
+    height: 200px;
+}
+
+#donat{
+    width: 500px;
+    height: 300px;
+}
+.left{
+    text-align: right;
+}
+.right{
+    text-align: center;
+}
+caption{
+    font-size: 20px;
+    padding: 5px;
+}
