@@ -9,31 +9,58 @@ function isInteger(n) {
 /**
  * Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
  */
-function even() {}
+function even() {
+    const values = []
+    for (i = 2; i <= 20; ++i){
+        if (i % 2 === 0) {
+            values.push(i)
+        }
+    }
+    return values
+}
 
 /**
  * Напишите функцию, считающую сумму чисел до заданного используя цикл
  * @param {*} n
  */
-function sumTo(n) {}
+function sumTo(n) {
+    let sum = 0
+    for (i = 0; i <= n; ++i){
+        sum +=i
+    }
+    return sum
+}
 
 /**
  * Напишите функцию, считающую сумму чисел до заданного используя рекурсию
  * @param {*} n
  */
-function recSumTo(n) {}
+function recSumTo(n) {
+    if (n === 1){
+        return 1
+    } else {
+        return n + recSumTo(n-1)
+    }
+}
 
 /**
  * Напишите функцию, считающую факториал заданного числа
  * @param {*} n
  */
-function factorial(n) {}
+function factorial(n) {
+    if (n === 1) {
+        return 1
+    } else {
+        return n * factorial(n-1)
+    }
+}
 
 /**
  * Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
  * @param {*} n
  */
-function isBinary(n) {}
+function isBinary(n) {
+}
 
 /**
  * Напишите функцию, которая находит N-е число Фибоначчи
