@@ -152,7 +152,38 @@ function sequence(start = 0, step = 1) {
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 33], text: 'text'}) // true
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 3], text: 'text2'}) // false
  */
-function deepEqual(firstObject, secondObject) {}
+function deepEqual(firstObject, secondObject) {
+    if (firstObject !== firstObject && secondObject !== secondObject) {
+        return true //nan
+    } 
+    
+    if (firstObject === secondObject) {
+        return true
+    }
+
+    if (typeof firstObject !== 'object' || firstObject === null ||
+        typeof secondObject !== 'object' || secondObject === null) {
+        return false
+    }
+    
+    const A = Object.keys(firstObject)
+    const B = Object.keys(secondObject)
+
+    if (A.length !== B.length) {
+        return false
+    }
+
+    for (let k of A) {
+        if (!B.includes(k)) {
+            return false
+        }
+
+        if (!deepEqual(firstObject[k], secondObject[k])) {
+            return false
+        }
+    }
+    return true
+}
 
 module.exports = {
     isInteger,
