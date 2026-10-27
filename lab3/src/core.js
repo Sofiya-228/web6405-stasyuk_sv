@@ -129,7 +129,14 @@ function getOperationFn(initialValue, operatorFn) {
  * console.log(generator()); // 7
  * console.log(generator()); // 9
  */
-function sequence(start, step) {}
+function sequence(start = 0, step = 1) {
+    let val = start
+    return () => {
+        cur = val
+        val += step
+        return cur
+    }
+}
 
 /**
  * Напишите функцию deepEqual, которая принимает два значения
