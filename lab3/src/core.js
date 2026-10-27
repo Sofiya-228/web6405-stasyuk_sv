@@ -11,7 +11,7 @@ function isInteger(n) {
  */
 function even() {
     const values = []
-    for (i = 2; i <= 20; ++i){
+    for (let i = 2; i <= 20; ++i){
         if (i % 2 === 0) {
             values.push(i)
         }
@@ -25,7 +25,7 @@ function even() {
  */
 function sumTo(n) {
     let sum = 0
-    for (i = 0; i <= n; ++i){
+    for (let i = 0; i <= n; ++i){
         sum +=i
     }
     return sum
@@ -60,13 +60,38 @@ function factorial(n) {
  * @param {*} n
  */
 function isBinary(n) {
+    let val = 0
+    for (let i = 0; val <= n; ++i){
+        val = 2**i
+        if (val === n) {
+            return true
+        }
+    }
+    return false
 }
+
 
 /**
  * Напишите функцию, которая находит N-е число Фибоначчи
  * @param {*} n
  */
-function fibonacci(n) {}
+function fibonacci(n) {
+    if (n === 0) {
+        return 0
+    }
+    if (n === 1) {
+        return 1
+    }
+    let a = 0
+    let b = 1
+    let val = 0
+    for (i = 2; i <= n; ++i){
+        val = a + b
+        a = b
+        b = val
+    }
+    return b
+}
 
 /** Напишите функцию, которая принимает начальное значение и функцию операции
  * и возвращает функцию - выполняющую эту операцию.
@@ -79,7 +104,14 @@ function fibonacci(n) {}
  * console.log(sumFn(5)) - 15
  * console.log(sumFn(3)) - 18
  */
-function getOperationFn(initialValue, operatorFn) {}
+function getOperationFn(initialValue, operatorFn) {
+    let cur = initialValue
+
+    return function (newVal) {
+        cur = operatorFn ? operatorFn(cur, newVal) : cur
+        return cur
+    }
+}
 
 /**
  * Напишите функцию создания генератора арифметической последовательности.
