@@ -1,0 +1,119 @@
+:root {
+    --page-background: #d3e5f8;
+    --text-color: #202630;
+    --border-color: #5f3ac5;
+    --gradient-start: #98d8dd;
+    --gradient-end: #26b4ec;
+    --link-color: #1f0568;
+    --link-hover-color: rgb(170, 93, 21);
+    --card-background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 24px;
+    background-color: var(--page-background);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.table{
+    border:1px solid var(--border-color);
+    width: 100%;
+    max-width: 500px;
+    margin:auto;
+    border-radius: 10px;
+    background: linear-gradient(
+        to bottom,
+        var(--gradient-start),
+        var(--gradient-end)
+    );
+}
+a{
+    color:var(--link-color);
+    text-decoration: none;
+
+}
+a:hover{
+    color:var(--link-hover-color);
+    text-decoration: underline;
+}
+#mem{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#donat{
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+.left{
+    text-align: right;
+}
+.right{
+    text-align: center;
+}
+caption{
+    font-size: 20px;
+    padding: 5px;
+}
+.page-header,
+main {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+
+    margin-bottom: 40px;
+}
+
+.intro-layout > #mem {
+    flex-shrink: 0;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    flex: 1 1 240px;
+    min-width: 0;
+}
+.fact-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+}
+.fact-portrait {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+.fact-card {
+    flex: 1 1 300px;
+    min-width: 0;
+    padding: 24px;
+
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+.fact-card h3 {
+    margin-top: 0;
+}
