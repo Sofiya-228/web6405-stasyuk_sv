@@ -20,55 +20,63 @@ body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-.table{
-    border:1px solid var(--border-color);
+.author-info {
+    border: 1px solid var(--border-color);
     width: 100%;
     max-width: 500px;
-    margin:auto;
+    margin: auto;
     border-radius: 10px;
+
     background: linear-gradient(
         to bottom,
         var(--gradient-start),
         var(--gradient-end)
     );
 }
-a{
-    color:var(--link-color);
+a {
+    color: var(--link-color);
     text-decoration: none;
-
 }
-a:hover{
-    color:var(--link-hover-color);
+
+a:hover {
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
-#mem{
+
+.intro__image {
     width: 200px;
     height: 200px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
-#donat{
+.support__image {
     width: 500px;
     max-width: 100%;
     height: auto;
 }
-.left{
+
+.author-info__label {
     text-align: right;
 }
-.right{
+
+.author-info__value {
     text-align: center;
 }
-caption{
+
+.author-info__caption {
     font-size: 20px;
     padding: 5px;
 }
+
 .page-header,
 main {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
-.intro-layout {
+
+.intro {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -78,9 +86,6 @@ main {
     margin-bottom: 40px;
 }
 
-.intro-layout > #mem {
-    flex-shrink: 0;
-}
 .navigation {
     display: flex;
     flex-direction: column;
@@ -89,14 +94,16 @@ main {
     flex: 1 1 240px;
     min-width: 0;
 }
-.fact-layout {
+
+.fact {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 24px;
 }
-.fact-portrait {
+
+.fact__portrait {
     width: 220px;
     max-width: 100%;
     height: auto;
@@ -105,7 +112,8 @@ main {
     border: 1px solid var(--border-color);
     border-radius: 16px;
 }
-.fact-card {
+
+.fact__content {
     flex: 1 1 300px;
     min-width: 0;
     padding: 24px;
@@ -114,21 +122,26 @@ main {
     border: 1px solid var(--border-color);
     border-radius: 16px;
 }
-.fact-card h3 {
+
+.fact__title {
     margin-top: 0;
 }
-.author-grid {
+
+.author-facts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.author-card {
+.author-facts__card {
     padding: 24px;
+}
+
+.author-facts__card_animated {
     animation: fact-appear 1.0s ease-out;
 }
 
-.author-card-image {
+.author-facts__image {
     width: 100%;
     height: 260px;
     object-fit: contain;

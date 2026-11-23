@@ -5,8 +5,58 @@
         <title>Компенсация</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="support">
         <div><h1>Искреннее желание поддержать автора</h1></div>
-        <img id = "donat" src="image/money.jpg" alt="Благодарность за донат">
+        <img
+            id="donat"
+            class="support__image"
+            src="image/money.jpg"
+            alt="Благодарность за донат"
+        >
+        <h2>Обратная связь</h2>
+
+<form id="feedback-form" class="feedback" method="post">
+    <p class="feedback__field">
+                <label class="feedback__label" for="reader-name">
+                    Ваше имя:
+                </label>
+                <input
+                    class="feedback__input"
+                    type="text"
+                    id="reader-name"
+                    name="readerName"
+                    required
+                >
+            </p>
+            <p class="feedback__field">
+                <label class="feedback__label" for="reader-email">
+                    Электронная почта:
+                </label>
+
+                <input
+                    class="feedback__input"
+                    type="email"
+                    id="reader-email"
+                    name="readerEmail"
+                    required
+                >
+            </p>
+            <p class="feedback__field">
+                <label class="feedback__label">
+                    <input
+                        class="feedback__checkbox"
+                        type="checkbox"
+                        id="reader-interest"
+                        name="wantsFacts"
+                        value="yes"
+                    >
+                    Хочу больше интересных фактов
+                </label>
+            </p>
+            <button class="feedback__submit" type="submit">
+                Отправить
+            </button>
+        </form>
+        <script src="feedback.js"></script>
     </body>
 </html>

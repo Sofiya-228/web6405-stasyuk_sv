@@ -5,30 +5,38 @@
         <title>Автор</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <img class="car" src="image/car.png" alt="">
     <body>
         <h1><strong>Пару слов об авторе, если читатель решил все же сюда перейти</strong></h1>
-        <table class="table">
-            <caption><b>Очень важная информация!</b></caption>
+        <table class="author-info">
+            <caption class="author-info__caption">
+                <b>Очень важная информация!</b>
+            </caption>
             <tr>
-                <td class="left">группа: </td> <td class="right">6405-010302D</td>
+                <td class="author-info__label">группа:</td>
+                <td class="author-info__value">6405-010302D</td>
             </tr>
             <tr>
-                <td class="left">ФИО: </td> <td class="right">Стасюк Софья Вячеславовна</td>
+                <td class="author-info__label">ФИО:</td>
+                <td class="author-info__value">
+                    Стасюк Софья Вячеславовна
+                </td>
             </tr>
             <tr>
-                <td class="left">Дата рождения: </td> <td class="right">11.10.2005</td>
+                <td class="author-info__label">Дата рождения:</td>
+                <td class="author-info__value">11.10.2005</td>
             </tr>
             <tr>
-                <td class="left">Домашние животные: </td> <td class="right">Маргоха - наглая кошка</td>
+                <td class="author-info__label">Домашние животные:</td>
+                <td class="author-info__value">
+                    Маргоха - наглая кошка
+                </td>
             </tr>
         </table>
         <h2>Тут тоже будут интересные факты, но уже об авторе</h2>
-<div class="author-grid">
-
-    <article class="author-card">
+        <div class="author-facts">
+            <article class="author-facts__card author-facts__card_animated">
         <img
-            class="author-card-image"
+            class="author-facts__image"
             src="image/book.jpg"
             alt="Обложка книги «Трудно быть богом»"
         >
@@ -38,18 +46,18 @@
             «Трудно быть богом».
         </p>
     </article>
-    <article class="author-card">
+    <article class="author-facts__card author-facts__card_animated">
         <img
-            class="author-card-image"
+            class="author-facts__image"
             src="image/asafyev.jpg"
             alt="Асафьев"
         >
-        <h3>Факт № 2</h3>
-        <p>
-            У Асафьева лучшие автомобильные новости.
-        </p>
-    </article>
-
-</div>
+                <h3>Факт № 2</h3>
+                <p>
+                    У Асафьева лучшие автомобильные новости.
+                </p>
+            </article>
+        </div>
+        <img class="car" src="image/car.png" alt="">
     </body>    
 </html>   
